@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Stock Price Prediction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            text-align: center;
+        }
+        form {
+            width: 300px;
+            margin: 0 auto;
+        }
+        label, input {
+            display: block;
+            margin-bottom: 10px;
+        }
+        input[type="submit"] {
+            margin-top: 10px;
+        }
+        #results {
+            width: 80%;
+            margin: 0 auto;
+            text-align: center;
+        }
+        img {
+            max-width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Stock Price Prediction using ARIMA Model</h1>
+
+<p>This web page demonstrates stock price prediction using ARIMA model. Enter the required information and click the "Predict" button to see the results.</p>
+
+<form id="predictionForm">
+    <label for="start">Start Date:</label>
+    <input type="date" id="start" name="start" required><br>
+    <label for="end">End Date:</label>
+    <input type="date" id="end" name="end" required><br>
+    <label for="symbol">Stock Symbol:</label>
+    <input type="text" id="symbol" name="symbol" required><br>
+    <input type="submit" value="Predict">
+</form>
+
+<div id="results">
+    <p>Accuracy: {{ accuracy }}%</p>
+</div>
+
+
+</body>
+</html>
